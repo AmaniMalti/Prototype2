@@ -10,10 +10,10 @@ public class cameraFollow : MonoBehaviour
     [SerializeField] private float rotationSpeed;
 
     private void FixedUpdate()
-    {
-        HandleTranslation();
-        HandleRotation();
-    }
+   {
+       HandleTranslation();
+       HandleRotation();
+     }
 
     private void HandleTranslation()
     {
@@ -26,4 +26,5 @@ public class cameraFollow : MonoBehaviour
         var rotation = Quaternion.LookRotation(direction, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
+
 }
